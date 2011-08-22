@@ -1,0 +1,30 @@
+The main goal of this project is to create a system-independent MathML
+rendering engine in Python. This engine works with an abstract
+'plotter' driver class, that can be subclassed for any rendering
+device needed.
+
+This is still in alpha development stage, so only a subset of MathML
+is supported.
+
+The mathml directory contains a module that:
+	- Is operating system independent;
+	- Is graphics device independent;
+	- Is XML parser independent;
+	- Has no dependencies whatsoever (except Python >= 2.2.1, of course).
+
+So, there really is no reason not to reuse this code.
+
+The file libxml2_mathml_parser implements an MathML parser on top of
+the mathml module, using libxml2.  Support for other XML parsers/APIs,
+such as SAX or DOM, can be added too.
+
+The test program, test.py, implements a Gtk+ based (gdk/pango)
+renderer.  You only need PyGTK 1.99.x and libxml2 python module to
+run it.
+
+So, you see, the idea is that the mathml module will remain forever
+without external dependencies, but a lot of system-dependent software
+can be built on top of it.
+
+Support for MathML editing is planned, but will take time to implement.
+

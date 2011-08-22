@@ -1,0 +1,13 @@
+Overview of changes between pymathml 0.2 and 0.3
+================================================
+- Add support for <mspace>
+
+
+Overview of changes between pymathml 0.1 and 0.2
+================================================
+- Support some more entities;
+- Add support for <mfenced>;
+- New SAX based parser;
+- Revamped sub/superscript layout algorithm;
+- Miscellaneous fixes for better MathML compliance;
+- Fix a potential infinite loop in vertical operator stretching code.
